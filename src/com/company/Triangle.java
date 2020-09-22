@@ -16,15 +16,26 @@ public class Triangle {
     public void setLenght_bc(double lenght_bc) { this.lenght_bc = lenght_bc; }
     public void setLenght_ca(double lenght_ca) { this.lenght_ca = lenght_ca; }
 
-    public static boolean CheskCorrectLenght(double lenght_ab,double lenght_bc,double lenght_ca){
+
+//    public static boolean CheskCorrectLenght(double lenght_ab,double lenght_bc,double lenght_ca){
+//        boolean bool;
+//        if(lenght_ab > 0 && lenght_bc > 0 && lenght_ca > 0){
+//            return bool = true;
+//        }
+//        else {
+//            return bool = false;
+//        }
+//    }
+    public static boolean CheckingIsoscelesTriangle(double lenght_ab,double lenght_bc,double lenght_ca){
         boolean bool;
-        if(lenght_ab > 0 && lenght_bc > 0 && lenght_ca > 0){
+        if(lenght_ab == lenght_bc && lenght_bc == lenght_ca){
             return bool = true;
         }
         else {
             return bool = false;
         }
     }
+
 
     public static boolean CheckingExistenceTriangle(double lenght_ab,double lenght_bc,double lenght_ca){
         boolean bool;
@@ -37,14 +48,8 @@ public class Triangle {
     }
 
     public double Perimetr(double lenght_ab,double lenght_bc,double lenght_ca) {
-        if (CheskCorrectLenght(getLenght_ab(), getLenght_bc(), getLenght_ca()) == true) {
-            perimetr = lenght_ab + lenght_bc + lenght_ca;
-            return perimetr;
-        }
-        else {
-            System.out.println("Что-то пошло не так");
-            return 0;
-        }
+        perimetr = lenght_ab + lenght_bc + lenght_ca;
+        return perimetr;
     }
 
     public double AreaTriangle(double lenght_ab,double lenght_bc,double lenght_ca){
@@ -64,7 +69,6 @@ public class Triangle {
     }
 
     public double CalculateAngle_C(double a,double b,double c){
-        double Angle_C = ((b * b) + (c * c) - (a * a)) / (2 * c * b);
-        return Math.acos(Angle_C) * radian;
+        return 180 - CalculateAngle_A(a, b, c) - CalculateAngle_B(a, b, c);
     }
 }
