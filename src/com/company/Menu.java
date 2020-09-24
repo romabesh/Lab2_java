@@ -5,7 +5,8 @@ public class Menu {
         System.out.println("\n\n1. Ввести данные: ");
         System.out.println("2. Вывести данные: ");
         System.out.println("3. Удалить данные: ");
-        System.out.println("4. Выход: ");
+        System.out.println("4. Найти все равнобедренные треугольники: ");
+        System.out.println("5. Выход: ");
         System.out.println("\nДля продолжения нажмите нужный вариант: ");
     }
 }

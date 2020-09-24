@@ -17,15 +17,6 @@ public class Triangle {
     public void setLenght_ca(double lenght_ca) { this.lenght_ca = lenght_ca; }
 
 
-//    public static boolean CheskCorrectLenght(double lenght_ab,double lenght_bc,double lenght_ca){
-//        boolean bool;
-//        if(lenght_ab > 0 && lenght_bc > 0 && lenght_ca > 0){
-//            return bool = true;
-//        }
-//        else {
-//            return bool = false;
-//        }
-//    }
     public static boolean CheckingIsoscelesTriangle(double lenght_ab,double lenght_bc,double lenght_ca){
         boolean bool;
         if(lenght_ab == lenght_bc && lenght_bc == lenght_ca){
