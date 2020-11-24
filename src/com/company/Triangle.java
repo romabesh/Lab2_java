@@ -1,6 +1,8 @@
 package com.company;
 
-public class Triangle {
+import java.io.Serializable;
+
+public class Triangle implements Serializable {
     private double lenght_ab;
     private double lenght_bc;
     private double lenght_ca;
@@ -26,7 +28,6 @@ public class Triangle {
             return bool = false;
         }
     }
-
 
     public static boolean CheckingExistenceTriangle(double lenght_ab,double lenght_bc,double lenght_ca){
         boolean bool;

@@ -7,6 +7,7 @@ public class EquilateralTriangle {
         double earea = 0;
         double num = 0;
         double averagearea = 0;
+
         for(int i = 0; i < sizemasiv; i++) {
             if (ArrayTriangle.sideAB.get(i).equals(ArrayTriangle.sideBC.get(i)) && ArrayTriangle.sideBC.get(i).equals(ArrayTriangle.sideCD.get(i))){
                 System.out.println("Треугольник " + (1 + i));
@@ -26,6 +27,6 @@ public class EquilateralTriangle {
             }
         }
         System.out.println("Самый большой равносторонний треугольник " + maxPerimetr);
-        System.out.println("Средняя площадь треугольников" + averagearea);
+        System.out.println("Средняя площадь треугольников " + averagearea);
     }
 }
